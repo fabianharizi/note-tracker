@@ -1,0 +1,107 @@
+.layout {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.875rem 1.25rem;
+  padding-left: max(1.25rem, env(safe-area-inset-left));
+  padding-right: max(1.25rem, env(safe-area-inset-right));
+  padding-top: max(0.875rem, calc(env(safe-area-inset-top)));
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  flex-shrink: 0;
+  min-height: calc(3.5rem + env(safe-area-inset-top));
+  box-sizing: border-box;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  min-height: var(--touch);
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.settingsLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--touch);
+  height: var(--touch);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  transition: color var(--transition), background var(--transition);
+}
+
+.settingsLink:hover {
+  color: var(--text);
+  background: var(--surface-hover);
+}
+
+.settingsIcon {
+  width: 22px;
+  height: 22px;
+}
+
+.logoutBtn {
+  padding: 0.5rem 1rem;
+  min-height: 36px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  border-radius: var(--radius-sm);
+  transition: background var(--transition), color var(--transition);
+}
+
+.logoutBtn:hover {
+  background: var(--surface-hover);
+  color: var(--danger);
+}
+
+@media (max-width: 768px) {
+  .logoutBtnWrap {
+    display: none;
+  }
+}
+
+.main {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior-x: none;
+  touch-action: pan-y;
+  padding: 2rem 1.25rem 2rem;
+  padding-top: calc(3.5rem + env(safe-area-inset-top) + 3rem);
+  padding-left: max(1.25rem, env(safe-area-inset-left));
+  padding-right: max(1.25rem, env(safe-area-inset-right));
+  padding-bottom: max(2rem, env(safe-area-inset-bottom));
+  max-width: 480px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  overscroll-behavior: none;
+}
+
+.pageTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+}

@@ -1,0 +1,124 @@
+.item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+  transition: border-color var(--transition), background var(--transition);
+}
+
+.item.completed .title {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1rem;
+  min-height: var(--touch);
+}
+
+.checkbox {
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  min-height: 22px;
+  border: 2px solid var(--text-muted);
+  border-radius: 6px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color var(--transition), background var(--transition);
+}
+
+.checkbox:hover,
+.item.completed .checkbox {
+  border-color: var(--success);
+}
+
+.item.completed .checkbox {
+  background: var(--success);
+  border-color: var(--success);
+  color: #fff;
+}
+
+.check {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+}
+
+.content.expandable {
+  cursor: pointer;
+}
+
+.title {
+  display: block;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.meta {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+}
+
+.due {
+  margin-right: 0.5rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.35rem;
+  flex-shrink: 0;
+}
+
+.actionBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  min-height: 36px;
+  min-width: 36px;
+  color: var(--accent);
+  border-radius: var(--radius-sm);
+  transition: background var(--transition), color var(--transition);
+}
+
+.actionBtn:hover {
+  background: var(--surface-hover);
+  color: var(--accent-hover);
+}
+
+.actionBtn.danger {
+  color: var(--danger);
+}
+
+.actionBtn.danger:hover {
+  background: rgba(240, 113, 120, 0.15);
+}
+
+.details {
+  padding: 0 1rem 1rem 3.25rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+  padding-top: 0.75rem;
+  margin-top: -0.5rem;
+}
+
+.details p {
+  margin: 0.25rem 0;
+}
+
+.dueDetail {
+  font-size: 0.85rem;
+}

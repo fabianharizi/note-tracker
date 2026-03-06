@@ -1,0 +1,193 @@
+.addForm {
+  background: var(--surface-elevated);
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--accent);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.addFormFields {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.addInputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-block: 0.875rem;
+}
+
+.addInputWrapperPopupOpen .addInput {
+  padding-left: 3.8rem;
+}
+
+.addInputIconBtn {
+  position: absolute;
+  left: 0.5rem;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  transition: color var(--transition), background var(--transition);
+  z-index: 2;
+}
+
+.addInputIconBtn:hover {
+  background: var(--surface-hover);
+  color: var(--text);
+}
+
+.addInput {
+  width: 100%;
+  padding: 1.15rem 1rem 1.15rem 3rem;
+  min-height: var(--touch);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-size: 1rem;
+  transition: border-color var(--transition), padding-left var(--transition);
+  box-sizing: border-box;
+}
+
+.addInput:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+.addInput::placeholder {
+  color: var(--text-muted);
+}
+
+.iconPickerPopup {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  z-index: 20;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  background: var(--surface-elevated);
+  border: 1px solid var(--border);
+  padding: 0.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  width: 320px;
+  max-width: 100%;
+}
+
+.iconPickerBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  padding: 0;
+  color: var(--text-muted);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  transition: color var(--transition), background var(--transition), border-color var(--transition);
+}
+
+.iconPickerBtn:hover {
+  color: var(--text);
+  background: var(--surface-hover);
+}
+
+.iconPickerBtnActive {
+  color: var(--accent);
+  background: var(--accent-muted);
+  border-color: var(--accent);
+}
+
+.addSectionBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.875rem 1rem;
+  min-height: var(--touch);
+  margin-bottom: 1.5rem;
+  background: var(--surface);
+  border: 2px dashed var(--border);
+  border-radius: var(--radius);
+  color: var(--text-muted);
+  font-size: 1rem;
+  transition: border-color var(--transition), color var(--transition), background var(--transition);
+}
+
+.addSectionBtn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-muted);
+}
+
+.addFormActions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  padding-top: 0.25rem;
+}
+
+.cancelBtn {
+  padding: 0.5rem 1rem;
+  min-height: 38px;
+  color: var(--text-muted);
+  border-radius: var(--radius-sm);
+  transition: background var(--transition), color var(--transition);
+}
+
+.cancelBtn:hover {
+  background: var(--surface-hover);
+  color: var(--text);
+}
+
+.saveBtn {
+  padding: 0.5rem 1.25rem;
+  min-height: 38px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  transition: background var(--transition);
+}
+
+.saveBtn:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+.saveBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.message {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin: 1rem 0;
+}
+
+.error {
+  color: var(--danger);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
