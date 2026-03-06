@@ -1,7 +1,7 @@
 # Local config (may contain credentials)
 backend/config/config.local.php
 backend/config/config.local.php.example
-PROJECT_CONTEXT.md
+frontend/PROJECT_CONTEXT.md
 
 # Dependencies and build
 frontend/node_modules/
